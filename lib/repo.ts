@@ -3,7 +3,7 @@ import { randomUUID } from 'crypto';
 
 import type {
   Client, ClientPackage, ClientRow, Enquiry, MetaEntry, Order, OrderStatus, OrderView,
-  Payment, PayMethod, PortfolioItem, Pkg, Res, Settings, Category, Snapshot, ThemeKey,
+  Payment, PayMethod, PortfolioItem, Pkg, Res, Settings, Category, Snapshot,
 } from './types';
 import { daysUntil, today } from './format';
 import { MEDIA_DEFAULTS, type MediaAsset } from './media';

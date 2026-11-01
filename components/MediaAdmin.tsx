@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { addCustomMediaAction, createUploadTicketAction, deleteCustomMediaAction, setMediaAction } from '@/app/actions';
 import type { MediaAsset } from '@/lib/media';
 
@@ -33,7 +34,7 @@ function Preview({ kind, url, poster, alt }: { kind: Kind; url: string; poster?:
   if (!url) return <div className="media-empty">No file yet</div>;
   return kind === 'video'
     ? <video src={url} poster={poster || undefined} controls muted playsInline preload="metadata" />
-    : <img src={url} alt={alt} loading="lazy" />;
+    : <Image src={url} alt={alt} width={640} height={420} unoptimized />;
 }
 
 function Status({ busy, message, error }: { busy: string; message: string; error: string }) {
